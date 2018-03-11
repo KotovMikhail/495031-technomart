@@ -13,7 +13,7 @@
 
 		<section class="search-form">
 			<h2 class="visually-hidden">Форма поиска по сайту</h2>
-			<form action="https://echo.htmlacademy.ru" method="post" id="search-block-form">
+			<form action="https://echo.htmlacademy.ru" method="get" id="search-block-form">
 				<div class="form-item">
 					<label class="visually-hidden" for="search">Поиск</label>
 					<input type="text" name="search" id="search" value="" maxlength="100" placeholder="Поиск:">
@@ -55,8 +55,8 @@
 			<a href="#" class="user-name-exit"></a>
 		</div>
 		<ul class="user-menu">
-			<li><a href="#" class="user-order-link">Мои заказы</a></li>
-			<li><a href="#" class="user-cabinet-link">Личный кабинет</a></li>
+			<li><a href="#" class="user-order-link" aria-label="Вход в кабинет заказов">Мои заказы</a></li>
+			<li><a href="#" class="user-cabinet-link" aria-label="Вход в личный кабинет">Личный кабинет</a></li>
 		</ul>
 
 		<nav class="main-nav">
@@ -82,16 +82,29 @@
 
 		<section class="filter">
 			<h2 class="visually-hidden">Фильтр товаров</h2>
-			<form class="filter" action="https://echo.htmlacademy.ru" method="post" id="filter-form">
+			<form class="filter-form" action="https://echo.htmlacademy.ru" method="get" id="filter-form-id">
 				<h3>Фильтр</h3>
 				<fieldset>	
 					<legend>Цена:</legend>
-					<input type="range" id="pricecount" name="pricecount" min="1000" max="30000" step="1000">
-					<div class="output-area">
-						<!-- Области для вывода значения -->
-						<input class="control" type="text" name="min-price-output" value="1000">
-						<span class="output-separation">—</span>
-						<input class="control" type="text" name="max-price-output" value="30000">
+					<div class="price-form">
+						<div class="price-slider">
+							<div class="slider-range"></div>
+							<a class="slider-handle" href=""></a>
+							<a class="slider-handle" href=""></a>
+						</div>
+						<div class="output-price">
+							<div class="range left-range">
+								<div class="input">
+									<input class="min-price" type="tel" value="0">
+								</div>
+							</div>
+							<div class="output-separation">-</div>
+							<div class="range right-range">
+								<div class="input">
+									<input class="max-price" type="tel" value="30000">
+								</div>
+							</div>
+						</div>
 					</div>
 				</fieldset>	
 
@@ -100,27 +113,22 @@
 					<ul>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" value="" checked>
-							<span class="checkbox-custom"></span>
 							<label for="filter-bosch">Bosch</label>
 						</li>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interscole" id="filter-interscole" value="">
-							<span class="checkbox-custom"></span>
 							<label for="filter-interscole">Интерскол</label>
 						</li>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" value="" checked>
-							<span class="checkbox-custom"></span>
 							<label for="filter-makita">Makita</label>
 						</li>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt" value="">
-							<span class="checkbox-custom"></span>
 							<label for="filter-dewalt">Dewalt</label>
 						</li>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi" value="">
-							<span class="checkbox-custom"></span>
 							<label for="filter-hitachi">Hitachi</label>
 						</li>
 					</ul>
@@ -131,12 +139,10 @@
 					<ul>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-radio" type="radio" name="battery" id="filter-accum" value="" checked>
-							<span class="radio-custom"></span>
 							<label for="filter-accum">Аккумуляторные</label>
 						</li>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-radio" type="radio" name="battery" id="filter-network" value="">
-							<span class="radio-custom"></span>
 							<label for="filter-network">Сетевые</label>
 						</li>
 					</ul>
@@ -162,8 +168,6 @@
 						<a class="descending" href="#"><span class="visually-hidden">Вниз</span></a>
 					</li>
 				</ul>
-				<span class="arr-top"></span>
-				<span class="arr-bottom"></span>
 			</div>
 
 			<ul class="catalog-list">
@@ -412,14 +416,20 @@
 		<section class="social">
 			<h2 class="visually-hidden">Социальные сети</h2>
 			<ul class="social-list">
-				<li><a class="social-button" href="#">Вконтакте</a></li>
-				<li><a class="social-button" href="#">Фейсбук</a></li>
-				<li><a class="social-button" href="#">Инстаграм </a></li>
+				<li>
+					<a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a>
+				</li>
+				<li>
+					<a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a>
+				</li>
+				<li>
+					<a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a>
+				</li>
 			</ul>
 		</section>
 		<section class="connect">
 			<h2 class="connect-title">Обратная связь</h2>
-			<a href="#" class="mail">mail@htmlacademy.ru</a>
+			<a class="mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 			<p>Разработано -</p>
 			<a href="https://htmlacademy.ru/intensive/htmlcss" class="creatures">htmlacademy.ru</a>
 		</section>
@@ -434,32 +444,5 @@
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
 
-	<section class="modal modal-login">	
-		<h2 class="visually-hidden">Форма для отправки письма</h2>	<!--Модальное окно  - отправка письма -->
-		<form  class="letter-form" action="https://echo.htmlacademy.ru" method="post">		
-			<div class="appotment-name">
-				<label for="user-name">Ваше имя:</label>
-				<input type="text" name="name" id="user-name" placeholder="Представьтесь, пожалуйста">
-			</div>
-			<div class="appotment-mail">
-				<label for="user-mail">Ваш e-mail:</label>
-				<input type="text" name="mail" id="user-mail" placeholder="Для отправки ответа">
-			</div>
-			<h3>Текст письма</h3>
-			<textarea name="letter" id="user-letter" cols="30" rows="5">В свободной форме</textarea>	
-			<button class="button" type="submit">Отправить</button>
-		</form>
-		<button class="modal-close" type="button">Закрыть</button>
-	</section>
-
-	<section class="modal modal-map">	<!--Модальное окно - попап карта -->
-		<h2 class="visually-hidden">Как до нас добраться</h2>
-		<p>Вы можете забрать товар сами,<br>
-		заехав в наш офис:</p>
-		<a class="img-map" href="#">
-			<img src="img/map.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19, Санкт-Петербург">
-		</a>
-		<button class="modal-close" type="button">Закрыть</button>
-	</section>
 </body>
 </html>

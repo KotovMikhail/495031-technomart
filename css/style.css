@@ -598,6 +598,11 @@ body {
 	border-radius: 3px;
 }
 
+.modal-add button,
+.modal button {
+	border: 0;
+}
+
 .added-items .btn-right {
 	border-radius: 3px;
 	background-color: #ffffff;

@@ -307,14 +307,11 @@
 			<div class="footer-top">
 				<div class="footer-top-layout container">
 					<div class="logo-container">
-						<a class="logo footer-logo">Техномарт</a>
-						<div class="footer-adress">
-							<p class="main-header-adr">
-								г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-							</p>
-							<a class="main-header-ph" href="tel:+78125550555">+7 (812) 555-05-55</a>
-						</div>
-
+						<a class="logo footer-logo" href="index.html">Техномарт</a>
+						<p class="footer-adress">
+							г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
+						</p>
+						<a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
 					</div>
 
 					<nav class="footer-nav">
@@ -373,7 +370,7 @@
 			<div class="modal-title">
 				<h2>Товар добавлен в корзину!</h2>
 			</div>
-			
+
 			<div class="added-items">
 				<a class="btn btn-left" href="#">Оформить заказ</a>
 				<a class="btn btn-right" href="#">Продолжить покупки</a>
@@ -383,7 +380,7 @@
 
 		<section class="modal modal-letter">
 			<div class="red-line"></div>
-			
+
 			<h2 class="visually-hidden">Форма для отправки письма</h2>	<!--Модальное окно  - отправка письма -->
 			<form  class="letter-form" action="https://echo.htmlacademy.ru" method="post">
 				<div class="form-wrapper">	
@@ -417,22 +414,22 @@
 			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 
-<script>
-  		var buyCart = document.querySelector('.buy');
-  		var popup = document.querySelector('.modal-add');
-  		var close = popup.querySelector('.modal-close');
+		<script>
+			var buyCart = document.querySelector('.buy');
+			var popup = document.querySelector('.modal-add');
+			var close = popup.querySelector('.modal-close');
 
- 			buyCart.addEventListener('click', function (evt) {
-		    evt.preventDefault();
-		    popup.classList.add('modal-show');
-   			
+			buyCart.addEventListener('click', function (evt) {
+				evt.preventDefault();
+				popup.classList.add('modal-show');
+
 			});
-	
-		
-		close.addEventListener('click', function (evt) {
-   			evt.preventDefault();
-    		popup.classList.remove('modal-show');
-  		});
-</script>
+
+
+			close.addEventListener('click', function (evt) {
+				evt.preventDefault();
+				popup.classList.remove('modal-show');
+			});
+		</script>
 	</body>
 	</html>

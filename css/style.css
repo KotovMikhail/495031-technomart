@@ -323,7 +323,7 @@ body {
 	text-decoration: none;
 	margin: 0;
 	margin-bottom: 4px;
-	padding: 9px 50px 9px 69px;
+	padding: 9px 50px 9px 68px;
 	border: 3px solid #ffffff;
 }
 
@@ -1132,7 +1132,7 @@ body {
 }
 
 .sorting-list li:not(:last-of-type) {
-	margin-right: 71px;
+	margin-right: 68px;
 }
 
 .sorting-arrows {
@@ -1306,7 +1306,7 @@ body {
 	padding: 0;
 	margin: 0;
 	text-align: center;
-	margin-bottom: 20px;
+    margin-bottom: 18px;
 	padding-left: 5px;
 
 }
@@ -1329,7 +1329,7 @@ body {
 .catalog-item .image {
 	width: 218px;
 	height: 155px;
-	margin-bottom: 24px;
+	margin-bottom: 26px;
 }
 
 .catalog-item .image  {
@@ -1596,7 +1596,7 @@ body {
 }
 
 .article {
-    padding: 63px 0 69px 0;
+    padding: 64px 0 69px 0;
 	background: url(../img/service-bg.png) repeat;
 }
 
@@ -1618,7 +1618,7 @@ body {
 	color: #000000;
 	text-transform: uppercase;
 	margin: 0;
-	margin-bottom: 26px;
+	margin-bottom: 28px;
 }
 
 .services-slider {
@@ -1916,16 +1916,24 @@ body {
 .footer-nav ul:nth-child(2) {
 	margin-left: 25px;
 }
+.logo-container {
+	width: 370px;	
+}
 
 .footer-logo {
 	font-size: 30px;
 	line-height: 30px;
     padding: 17px 0 15px 0;
-    margin-bottom: 32px;
+    margin-bottom: 0;
 }
 
-.footer-adress p,
-.footer-adress a,
+.footer-top .footer-adress {
+	margin-top: 33px;
+    padding-left: 5px;
+}
+
+.footer-adress,
+.footer-phone,
 .footer-nav a {
 	font-size: 18px;
 	line-height: 24px;
@@ -1978,7 +1986,7 @@ body {
 
 
 .feedback p:last-child {
-	padding-left: 50px;
+	padding-left: 52px;
 }
   
 
@@ -2159,7 +2167,7 @@ body {
 	border: none;
 	border-bottom: 1px solid #e5e5e5;
 	margin-bottom: 2px;
-    padding-bottom: 17px;
+    padding-bottom: 18px;
 }
 
 .filter-sorting legend {
@@ -2167,13 +2175,13 @@ body {
 }
 
 .filter-sorting:nth-of-type(3) {
-	margin-bottom: 44px;;
+	margin-bottom: 40px;;
 	border-bottom: none;
 }
 
 .filter-option {
 	padding-left: 35px;
-	margin-bottom: 19px;
+	margin-bottom: 20px;
 }
 
 .filter-form legend {
@@ -2183,7 +2191,7 @@ body {
 	font-weight: bold;
 	color: #000000;
 	text-transform: uppercase;
-	margin-bottom: 13px
+	margin-bottom: 13px;
 }
 
 .filter-form label {

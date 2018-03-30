@@ -79,10 +79,10 @@ body {
 .logo:hover {
   background-color: #ca2c37;
 }
-			
+
 .btn:active,
 .logo:active {
-	background-color: #ba2732;
+  background-color: #ba2732;
 }
 
 .cart-container {
@@ -1924,7 +1924,7 @@ body {
 }
 
 .services-slide:nth-child(3)::after {
-  top: 2px
+  top: 2px;
   right: -12px;
 
   background-image: url("../img/credit-icon.png");
@@ -2077,6 +2077,10 @@ body {
 
 .map .img-map {
   margin-bottom: 32px;
+}
+
+.map .img-map:hover {
+  cursor: pointer;
 }
 
 .map .btn-caption {
@@ -2403,7 +2407,7 @@ body {
   margin-bottom: 40px;
 
   border-bottom: none;
-;
+  ;
 }
 
 .filter-option {
@@ -2636,6 +2640,7 @@ body {
   font-size: 0;
 
   background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2685,6 +2690,7 @@ body {
   position: absolute;
   top: 17px;
   right: 10px;
+  z-index: 50;
 
   width: 21px;
   height: 21px;
@@ -2698,6 +2704,7 @@ body {
   border: 0;
   cursor: pointer;
 }
+
 
 .added-items {
   display: -webkit-box;
@@ -2741,7 +2748,7 @@ body {
 
 .modal-map {
   position: fixed;
-  top: 38.1%;
+  top: 50%;
   left: 50%;
   z-index: 50;
 
@@ -2767,6 +2774,7 @@ body {
   width: 620px;
 
   background-color: #ffffff;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2818,7 +2826,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
-  color: #a9a9a9;
+  color: #000000;
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
@@ -2834,7 +2842,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", Arial, sans-serif;
-  color: #a9a9a9;
+  color: #000000;
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
@@ -2891,4 +2899,66 @@ body {
 
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

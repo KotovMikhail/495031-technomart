@@ -2033,6 +2033,10 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
 }
 
+.company p:nth-of-type(2) {
+  width: 390px;
+}
+
 .company .logistic-item {
   position: relative;
 
@@ -2594,7 +2598,7 @@ body {
 
   font-size: 13px;
   line-height: 18px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;

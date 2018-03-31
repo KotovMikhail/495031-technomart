@@ -2864,19 +2864,19 @@ body {
 }
 
 .modal-letter input::-webkit-input-placeholder {
-	color: #a9a9a9;;
+	color: #a9a9a9;
 }
 
 .modal-letter input:-ms-input-placeholder {
-	color: #a9a9a9;;
+	color: #a9a9a9;
 }
 
 .modal-letter input::-ms-input-placeholder {
-	color: #a9a9a9;;
+	color: #a9a9a9;
 }
 
 .modal-letter input::placeholder {
-	color: #a9a9a9;;
+	color: #a9a9a9;
 }
 
 .btn-submit-wrapper .btn:active {

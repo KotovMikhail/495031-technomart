@@ -5,7 +5,7 @@
 	<title>Техномарт</title>
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.min.css">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	
@@ -123,7 +123,7 @@
 			<ul class="catalog-list">
 				<li class="catalog-item .new-item">
 					<div class="actions">
-						<a class="buy" href="#">Купить</a>
+						<a class="buy" href="form.html">Купить</a>
 						<a class="mark" href="#">В закладки</a>
 					</div>
 					<div>
@@ -139,7 +139,7 @@
 				</li>
 				<li class="catalog-item">
 					<div class="actions">
-						<a class="buy" href="#">Купить</a>
+						<a class="buy" href="form.html">Купить</a>
 						<a class="mark" href="#">В закладки</a>
 					</div>
 					<div>
@@ -155,7 +155,7 @@
 				</li>
 				<li class="catalog-item">
 					<div class="actions">
-						<a class="buy" href="#">Купить</a>
+						<a class="buy" href="form.html">Купить</a>
 						<a class="mark" href="#">В закладки</a>
 					</div>
 					<div>
@@ -171,7 +171,7 @@
 				</li>
 				<li class="catalog-item new-item">
 					<div class="actions">
-						<a class="buy" href="#">Купить</a>
+						<a class="buy" href="form.html">Купить</a>
 						<a class="mark" href="#">В закладки</a>
 					</div>
 					<div>
@@ -196,28 +196,28 @@
 
 			<ul class="partner-list">
 				<li class="partner-item">
-					<a href="#"><img src="img/bosch.png" alt="Bosch"></a>
+					<a href="#"><img src="img/bosch.png" width="126" height="37" alt="Bosch"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/makita.png" alt="Makita"></a>
+					<a href="#"><img src="img/makita.png" width="123" height="40" alt="Makita"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/dewalt.png" alt="DeWalt"></a>
+					<a href="#"><img src="img/dewalt.png" width="146" height="44" alt="DeWalt"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/interscole.png" alt="Интерскол"></a>
+					<a href="#"><img src="img/interscole.png" width="184" height="32" alt="Интерскол"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/hitachi.png" alt="Hitachi"></a>
+					<a href="#"><img src="img/hitachi.png" width="169" height="31" alt="Hitachi"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/lg.png" alt="LG"></a>
+					<a href="#"><img src="img/lg.png" width="121" height="73" alt="LG"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/aeg.png" alt="AEG"></a>
+					<a href="#"><img src="img/aeg.png" width="151" height="96" alt="AEG"></a>
 				</li>
 				<li class="partner-item">
-					<a href="#"><img src="img/metabo.png" alt="metabo"></a>
+					<a href="#"><img src="img/metabo.png" width="204" height="69" alt="metabo"></a>
 				</li>
 			</ul>
 		</section>
@@ -278,11 +278,11 @@
 			<section class="map">
 				<h2>Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис:</p>
-				<a class="img-map" href="#">
+				<a class="img-map" href="form.html">
 					<img class="interactive-map" src="img/map.png" width="300" height="158" alt="Как нас найти?">
 				</a>
 				<p>
-					<a class="btn btn-caption btn-write" href="#">Заблудились? Напишите нам!</a>
+					<a class="btn btn-caption btn-write" href="form.html">Заблудились? Напишите нам!</a>
 				</p>
 			</section>
 		</div>
@@ -383,7 +383,7 @@
 						<input type="text" name="mail" id="user-mail" placeholder="Для отправки ответа">
 					</div>
 				</div>
-				<h3>Текст письма</h3>
+				<label class=" " for="user-letter">Текст письма</label>
 				<textarea name="letter" id="user-letter" cols="30" rows="5" placeholder="В свободной форме"></textarea>
 			</div>
 			<div class="btn-submit-wrapper">
@@ -401,7 +401,7 @@
 		</a>
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
-
+	<script src="js/popup.js"></script>
 </body>
 
 </html>

@@ -396,8 +396,6 @@ body {
 	padding: 0;
 
 	list-style: none;
-
-
 }
 
 .user-navigation .login-link {
@@ -1130,16 +1128,16 @@ body {
 	vertical-align: middle;
 	text-align: center;
 
-	background-color: rgba(229, 229, 229, 0.1);
+	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 3px;
 }
 
 .promo-item .btn-promo:hover {
-	background-color: rgba(204, 204, 204, 0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .promo-item .btn-promo:active {
-	background-color: rgba(178, 178, 178, 0.3);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .promo-top-list li:nth-child(1) {
@@ -1259,8 +1257,9 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;	
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	width: 380px;
 	margin: 0;
 	padding: 0;
 
@@ -1274,8 +1273,6 @@ body {
 	border-bottom: none;
 	cursor: default;
 }
-
-
 
 .sorting-list li:not(:last-of-type) {
 	margin-right: 68px;
@@ -1743,12 +1740,12 @@ body {
 	height: 142px;
 }
 
-.partner-item:hover {
+.partner-item a:hover {
 	-webkit-box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 	box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.partner-item:active {
+.partner-item a:active {
 	-webkit-box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 	box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 	opacity: 0.3;
@@ -2439,7 +2436,7 @@ body {
 }
 
 .filter-form legend {
-	margin-bottom: 13px;
+	margin-bottom: 12px;
 
 	font-weight: bold;
 	font-size: 17px;
@@ -2483,18 +2480,24 @@ body {
 	background-position: 0 0;
 }
 
-.filter-input-checkbox:checked + label::after {
-	content: "";
-	position: absolute;
-	top: -2px;
-	left: -35px;
-
-	width: 25px;
-	height: 25px;
+.filter-input-checkbox:checked + label::before {
+	width: 27px;
+	height: 23px;
 
 	background: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:not(:checked):not(:disabled) + label:hover::before {
+	background: url("../img/checkbox-off-hover.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
+}
+
+.filter-input-checkbox:checked:not(:disabled) + label:hover::before {
+	width: 27px;
+	height: 23px;
+
+	background: url("../img/checkbox-on-hover.svg");
 }
 
 .filter-input-radio + label::before {
@@ -2507,83 +2510,29 @@ body {
 	height: 25px;
 
 	background: url("../img/radio-off.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
 }
 
-.filter-input-radio:checked + label::after {
-	content: "";
-	position: absolute;
-	top: -2px;
-	left: -35px;
-
-	width: 25px;
-	height: 25px;
-
+.filter-input-radio:checked + label::before {
 	background: url("../img/radio-on.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
 }
 
+.filter-input-radio:not(:checked):not(:disabled) + label:hover::before {
+	background: url("../img/radio-off-hover.svg");
+}
 
-.filter-form input[type="radio"]:disabled ~ label,
-.filter-form input[type="checkbox"]:disabled ~ label {
+.filter-input-radio:checked:not(:disabled) + label:hover::before {
+	background: url("../img/radio-on-hover.svg");
+}
+
+.filter-input-radio:disabled ~ label,
+.filter-input-checkbox:disabled ~ label {
 	opacity: 0.4;
 }
 
-.filter-form input[type="checkbox"]:disabled + label::before {
-	background: url("../img/checkbox-on.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-.filter-form input[type="checkbox"]:disabled + label::after {
-	background: url("../img/checkbox-on-active.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-.filter-form input[type="radio"]:disabled + label::before {
-	background: url("../img/radio-off-hover.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-.filter-form input[type="radio"]:disabled + label::after {
-	background: url("../img/radio-on-active.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-
-.filter-form input[type="checkbox"]:not(:disabled) + label:hover::before {
-	background: url("../img/checkbox-off-hover.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-.filter-form input[type="checkbox"]:not(:disabled) + label:hover::after {
-	background: url("../img/checkbox-on-active.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-
-.filter-form input[type="radio"]:not(:disabled) + label:hover::before {
-	background: url("../img/radio-off-hover.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-.filter-form input[type="radio"]:not(:disabled) + label:hover::after {
-	background: url("../img/radio-on-active.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-}
-
-.filter-form input[type="radio"]:focus ~ label,
-.filter-form input[type="checkbox"]:focus ~ label {
+.filter-input-radio:focus ~ label::before,
+.filter-input-checkbox:focus ~ label::before {
 	outline: 1px dotted #000000;
+	outline-offset: 2px;
 }
 
 .pagination-list {
@@ -2686,7 +2635,7 @@ body {
 }
 
 .modal-title {
-	margin-top: 67px;
+	margin-top: 66px;
 	margin-bottom: 67px;
 	padding-right: 120px;
 	padding-left: 100px;
@@ -2737,7 +2686,6 @@ body {
 	border: 0;
 	cursor: pointer;
 }
-
 
 .added-items {
 	display: -webkit-box;
@@ -2867,7 +2815,7 @@ body {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
-	margin-top: 9px;
+	margin-top: 8px;
 	padding: 8px 14px;
 
 	font-weight: normal;
@@ -2954,53 +2902,53 @@ body {
 
 @-webkit-keyframes bounce {
 	0% {
-		-webkit-transform: translateY(-2000px);
-		transform: translateY(-2000px);
+		-webkit-transform: translate(-50%, -50%) translateY(-2000px);
+		transform: translate(-50%, -50%) translateY(-2000px);
 	}
 
 	70% {
-		-webkit-transform: translateY(30px);
-		transform: translateY(30px);
+		-webkit-transform: translate(-50%, -50%) translateY(30px);
+		transform: translate(-50%, -50%) translateY(30px);
 	}
 
 	90% {
-		-webkit-transform: translateY(10px);
-		transform: translateY(10px);
+		-webkit-transform: translate(-50%, -50%) translateY(10px);
+		transform: translate(-50%, -50%) translateY(10px);
 	}
 
 	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
+		-webkit-transform: translate(-50%, -50%) translateY(0);
+		transform: translate(-50%, -50%) translateY(0);
 	}
 }
 
 @keyframes bounce {
 	0% {
-		-webkit-transform: translateY(-2000px);
-		transform: translateY(-2000px);
+		-webkit-transform: translate(-50%, -50%) translateY(-2000px);
+		transform: translate(-50%, -50%) translateY(-2000px);
 	}
 
 	70% {
-		-webkit-transform: translateY(30px);
-		transform: translateY(30px);
+		-webkit-transform: translate(-50%, -50%) translateY(30px);
+		transform: translate(-50%, -50%) translateY(30px);
 	}
 
 	90% {
-		-webkit-transform: translateY(10px);
-		transform: translateY(10px);
+		-webkit-transform: translate(-50%, -50%) translateY(10px);
+		transform: translate(-50%, -50%) translateY(10px);
 	}
 
 	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
+		-webkit-transform: translate(-50%, -50%) translateY(0);
+		transform: translate(-50%, -50%) translateY(0);
 	}
 }
 
 @-webkit-keyframes shake {
 	0%,
 	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
+		-webkit-transform: translate(-50%, -50%) translateX(0);
+		transform: translate(-50%, -50%) translateX(0);
 	}
 
 	10%,
@@ -3008,24 +2956,24 @@ body {
 	50%,
 	70%,
 	90% {
-		-webkit-transform: translateX(-10px);
-		transform: translateX(-10px);
+		-webkit-transform: translate(-50%, -50%) translateX(-10px);
+		transform: translate(-50%, -50%) translateX(-10px);
 	}
 
 	20%,
 	40%,
 	60%,
 	80% {
-		-webkit-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translate(-50%, -50%) translateX(10px);
+		transform: translate(-50%, -50%) translateX(10px);
 	}
 }
 
 @keyframes shake {
 	0%,
 	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
+		-webkit-transform: translate(-50%, -50%) translateX(0);
+		transform: translate(-50%, -50%) translateX(0);
 	}
 
 	10%,
@@ -3033,17 +2981,15 @@ body {
 	50%,
 	70%,
 	90% {
-		-webkit-transform: translateX(-10px);
-		transform: translateX(-10px);
+		-webkit-transform: translate(-50%, -50%) translateX(-10px);
+		transform: translate(-50%, -50%) translateX(-10px);
 	}
 
 	20%,
 	40%,
 	60%,
 	80% {
-		-webkit-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translate(-50%, -50%) translateX(10px);
+		transform: translate(-50%, -50%) translateX(10px);
 	}
 }
-
-

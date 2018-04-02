@@ -1,4 +1,3 @@
-var buyCart = document.querySelector(".buy");
 var popup = document.querySelector(".modal-add");
 var catalogItem = document.querySelectorAll(".catalog-item");
 

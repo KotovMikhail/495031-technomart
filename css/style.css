@@ -25,10 +25,9 @@ body {
 
 	border: 0;
 
-	clip: rect(0 0 0 0);
-	clip-path: inset(100%);
-
 	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
 }
 
 .main-header {
@@ -440,10 +439,10 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-orient: vertical;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 
@@ -454,8 +453,9 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: nowrap;
 	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+
 	margin-bottom: 7px;
 }
 
@@ -2128,9 +2128,7 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+
 	padding-bottom: 49px;
 }
 
@@ -2155,11 +2153,22 @@ body {
 }
 
 .footer-nav .footer-nav-list-2 {
-	margin-left: 26px;
+	padding-left: 24px;
+}
+
+.footer-nav-list-1 li,
+.footer-nav-list-2 li{
+	margin-right: 58px;
+}
+
+.footer-nav-list-1 li:last-child,
+.footer-nav-list-2 li:last-child {
+	margin-right: 0;
 }
 
 .logo-container {
 	width: 370px;
+	margin-right: 24px;
 }
 
 .footer-logo {
@@ -2374,6 +2383,11 @@ body {
 /* Каталог */
 
 .breadcrumbs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	list-style: none;
 }
 
